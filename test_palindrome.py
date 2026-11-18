@@ -1,10 +1,13 @@
-from palindrome import palindrome
+from palindrome import is_palindrome
 
 def test_palindrome():
-    assert palindrome(121) == True
+    assert is_palindrome("madam") == True
 
 def test_not_palindrome():
-    assert palindrome(123) == False
+    assert is_palindrome("hello") == False
 
-def test_single_digit():
-    assert palindrome(5) == True
+def test_single_character():
+    assert is_palindrome("a") == True
+
+def test_empty_string():
+    assert is_palindrome("") == True
